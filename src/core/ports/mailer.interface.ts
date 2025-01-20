@@ -7,4 +7,5 @@ export type Email = {
 export const I_MAILER = 'I_MAILER';
 export interface IMailer {
   send(props: Email): Promise<void>;
+  getEmails(): Email[];
 }

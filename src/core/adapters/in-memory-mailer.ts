@@ -6,4 +6,8 @@ export class InMemoryMailer implements IMailer {
   async send(email: Email): Promise<void> {
     this.sentEmails.push(email);
   }
+  // Permet de récupérer la liste des e-mails envoyés
+  getEmails(): Email[] {
+    return this.sentEmails;
+  }
 }
